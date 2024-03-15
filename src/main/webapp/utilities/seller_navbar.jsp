@@ -19,7 +19,7 @@
                   <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/view_products">View Products</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/Logout">View Products</a>
+                  <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/seller_logout">Logout</a>
                </li>
             </ul>
          </div>

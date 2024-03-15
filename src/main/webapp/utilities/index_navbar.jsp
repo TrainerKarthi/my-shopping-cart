@@ -13,8 +13,8 @@
                   Customer
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="../user/user_registration.jsp">Sign Up</a></li>
-                  <li><a class="dropdown-item" href="../user/user_login.jsp">Sign In</a></li>
+                  <li><a class="dropdown-item" href="${pageContext.request.contextPath}/emptyUser">Sign Up</a></li>
+                  <li><a class="dropdown-item" href="${pageContext.request.contextPath}/user/user_login.jsp">Sign In</a></li>
                 </ul>
               </div>
              <div class="dropdown">
@@ -22,8 +22,8 @@
                   Seller
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="../seller/seller_register.jsp">Sign Up</a></li>
-                  <li><a class="dropdown-item" href="../seller/seller_login.jsp">Sign In</a></li>
+                  <li><a class="dropdown-item" href="${pageContext.request.contextPath}/emptySeller">Sign Up</a></li>
+                  <li><a class="dropdown-item" href="${pageContext.request.contextPath}/seller/seller_login.jsp">Sign In</a></li>
                 </ul>
              </div>
              <li class="nav-item">

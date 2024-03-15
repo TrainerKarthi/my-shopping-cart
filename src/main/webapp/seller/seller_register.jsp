@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,36 +27,38 @@
 				<div class="card paint-card">
 					<div class="card-body">
 						<p class="fs-4 text-center">Seller Sign Up Page</p>
-						<p class="text-center text-primary fs-5">${seller_register}</p>
-						<form action="../seller_register" method="post" autocomplete="off">
+						<p class="text-center text-primary fs-5">
+							<c:if test="${not empty seller_register}">
+								seller_register
+							</c:if>
+						</p>
+						<form:form action="${pageContext.request.contextPath}/seller_register" modelAttribute="seller">
 							<div class="mb-3">
-								<label class="form-label">Name</label> <input name="name"
-									type="text" class="form-control" required>
+								<label class="form-label">Name</label>
+								<form:input path="name" type="text" class="form-control" />
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label">Mobile</label>
+								<form:input path="mobile" type="tel" class="form-control" />
 							</div>
 							<div class="mb-3">
-								<label class="form-label">Age</label> <input name="age"
-									type="number" class="form-control" required>
+								<label class="form-label">Email Address</label>
+								<form:input path="email" type="email" class="form-control" />
 							</div>
 							<div class="mb-3">
-								<label class="form-label">Mobile</label> <input name="mobile"
-									type="tel" class="form-control" required>
-							</div>
-							<div class="mb-3">
-								<label class="form-label">Email Address</label> <input
-									name="email" type="email" class="form-control" required>
-							</div>
-							<div class="mb-3">
-								<label class="form-label">Password</label> <input
-									name="password" type="password" class="form-control" required>
+								<label class="form-label">Password</label>
+								<form:input path="password" type="password" class="form-control" />
 							</div>
 							<div class="mb-3">
 								<label class="form-label">Address</label>
-								<textarea name="Address" cols="20" rows="4" class="form-control"></textarea>
+								<form:textarea path="address" cols="20" rows="4"
+									class="form-control" />
 							</div>
 
 							<button type="submit"
 								class="btn bg-secondary text-white col-md-12">Sign Up</button>
-						</form>
+						</form:form>
 					</div>
 				</div>
 			</div>
