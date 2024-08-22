@@ -46,4 +46,8 @@ public class UserController {
 		return new ModelAndView("user/user_home.jsp");
 	}
 
+	public void m1() {
+		System.out.println("Hello world");
+	}
+
 }
